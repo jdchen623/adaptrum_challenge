@@ -16,14 +16,14 @@ class Picture {
 
 };
 
-/*sets an entire column to a single character */
+/*sets an entire column to a single character with complexity O(n)*/
 void Picture::set_column(int column, char character) {
     for(size_t i = 0; i < rows.size(); i++) {
         rows[i].insert(rows[i].begin() + column, character);
     }
 }
 
-/*sets an entire row to a single character */
+/*sets an entire row to a single character with complexity O(n)*/
 void Picture::set_row (int row, char character) {
     vector<char> toAdd = rows[row];
     for(size_t i = 0; i < toAdd.size(); i++) {
@@ -31,7 +31,7 @@ void Picture::set_row (int row, char character) {
     }
     rows.insert(rows.begin() + row, toAdd);
 }
-/*inserts a single character into a specific coordinate of the picture */
+/*inserts a single character into a specific coordinate of the picture with complexity O(1)*/
 void Picture::set_single(int x, int y, char character) {
     rows[x][y] = character;
 }
