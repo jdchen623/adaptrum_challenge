@@ -46,16 +46,5 @@ void Picture::printPicture() {
     }
 }
 
-int main()
-{
-    Picture asciArt;
-    for(int i =0; i < 2; i++) {
-        asciArt.set_row(i, '!');
-    }
-    asciArt.set_row(4, '?');
-    asciArt.set_column(2, '%');
-    asciArt.set_single(2,4,'&');
-    asciArt.printPicture();
-    return 0;
-}
+
 
